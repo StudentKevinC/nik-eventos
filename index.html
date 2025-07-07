@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="img/logo.jpeg" />
+
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title" content="Nik Eventos - Celebraciones inolvidables al aire libre">
+  <meta property="og:description" content="Reserva tu evento en Nik Eventos: quinchos, piscina, zonas sombreadas y más en Rancagua.">
+  <meta property="og:image" content="img/banner-generado.png">
+  <meta property="og:url" content="https://tusitio.com">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nik Eventos - Celebraciones inolvidables">
+  <meta name="twitter:description" content="Disfruta un centro de eventos completo en Santa Amelia, Tuniche. Ideal para familias, colegios y empresas.">
+  <meta name="twitter:image" content="img/banner-generado.png">
+</head>
+  <title>Nik Eventos</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Nik Eventos - Centro de eventos al aire libre en Rancagua. Piscina, quinchos, diversión y más para tus celebraciones." />
+  <!-- Fuente para títulos (Merriweather) -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-[Poppins]">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#inicio" class="flex items-center space-x-2">
+        <img src="img/logo.jpeg" alt="Logo Nik Eventos" class="h-10 w-auto">
+        <span class="text-xl font-bold text-blue-600">Nik Eventos</span>
+      </a>
+      <div class="space-x-6 hidden md:flex">
+        <a href="#inicio" class="text-gray-700 hover:text-blue-600">Inicio</a>
+        <a href="#informacion" class="text-gray-700 hover:text-blue-600">Información</a>
+        <a href="#ubicacion" class="text-gray-700 hover:text-blue-600">Ubicación</a>
+        <a href="#contacto" class="text-gray-700 hover:text-blue-600">Contáctanos</a>
+        <a href="https://wa.me/56922518904" target="_blank" class="text-green-600 hover:text-green-700">Contacto</a>
+      </div>
+      <button id="navbar-toggle" class="md:hidden text-blue-600">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+    </div>
+    <div id="navbar-menu" class="md:hidden hidden flex-col space-y-2 mt-4 px-4">
+      <a href="#inicio" class="text-gray-700 hover:text-blue-600">Inicio</a>
+      <a href="#informacion" class="text-gray-700 hover:text-blue-600">Información</a>
+      <a href="#ubicacion" class="text-gray-700 hover:text-blue-600">Ubicación</a>
+      <a href="#contacto" class="text-gray-700 hover:text-blue-600">Contáctanos</a>
+      <a href="https://wa.me/56922518904" target="_blank" class="text-green-600 hover:text-green-700">Contacto</a>
+    </div>
+  </nav>
+  <!-- Espaciador para evitar superposición con el contenido -->
+  <div class="h-20"></div>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero-section">
+    <!-- Overlay con degradado oscuro -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"></div>
+
+    <!-- Contenido centrado -->
+    <div class="relative z-10 text-center px-4 max-w-screen-md mx-auto">
+      <h1 class="hero-title animate-fadeInUp">Nik Eventos</h1>
+      <p class="hero-subtitle animate-fadeInUp">El lugar perfecto para tus celebraciones al aire libre</p>
+    </div>
+  </section>
+
+  <!-- Instalaciones -->
+  <section id="instalaciones" class="py-20 px-4 md:px-16 bg-gradient-to-b from-white to-blue-50">
+    <h2 class="section-title">¿Qué ofrecemos?</h2>
+    <p class="section-subtitle">Conoce todas las comodidades, zonas de entretenimiento y servicios que Nik Eventos tiene para ti.</p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10 text-sm sm:text-base font-semibold justify-items-center">
+      <button onclick="showCategory('diversiones')" data-category="diversiones" class="toggle-btn active flex items-center gap-2 px-5 py-3 rounded-lg shadow-md bg-gray-100 hover:bg-blue-100 transition">
+        <i class="fa-solid fa-gamepad text-blue-600"></i> Diversiones
+      </button>
+      <button onclick="showCategory('equipamiento')" data-category="equipamiento" class="toggle-btn flex items-center gap-2 px-5 py-3 rounded-lg shadow-md bg-gray-100 hover:bg-blue-100 transition">
+        <i class="fa-solid fa-toolbox text-blue-600"></i> Equipamiento
+      </button>
+      <button onclick="showCategory('servicios')" data-category="servicios" class="toggle-btn flex items-center gap-2 px-5 py-3 rounded-lg shadow-md bg-gray-100 hover:bg-blue-100 transition">
+        <i class="fa-solid fa-concierge-bell text-blue-600"></i> Servicios
+      </button>
+      <button onclick="showCategory('areas')" data-category="areas" class="toggle-btn flex items-center gap-2 px-5 py-3 rounded-lg shadow-md bg-gray-100 hover:bg-blue-100 transition">
+        <i class="fa-solid fa-map text-blue-600"></i> Áreas
+      </button>
+    </div>
+
+    <div id="diversiones" class="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-10 hidden">
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-person-swimming text-blue-600 text-2xl"></i> Piscina</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-futbol text-blue-600 text-2xl"></i> Tacataca</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-child-reaching text-blue-600 text-2xl"></i> Cama elástica</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-table-tennis-paddle-ball text-blue-600 text-2xl"></i> Mesa de ping pong</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-basketball text-blue-600 text-2xl"></i> Juego de básquetbol</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-bullseye text-blue-600 text-2xl"></i> Juego de dardos</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-futbol text-blue-600 text-2xl"></i> Área futbolito</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-child text-blue-600 text-2xl"></i> Columpios</div>
+    </div>
+
+    <div id="equipamiento" class="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-10 hidden">
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-fire-burner text-blue-600 text-2xl"></i> Parrilla exterior</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-fire text-blue-600 text-2xl"></i> Horno a leña</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-fire-burner text-blue-600 text-2xl"></i> Cocinilla a gas</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-snowflake text-blue-600 text-2xl"></i> Refrigerador</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-temperature-low text-blue-600 text-2xl"></i> Congeladora</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-music text-blue-600 text-2xl"></i> Equipo musical</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-candy-cane text-blue-600 text-2xl"></i> Carrito candy bar</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base">
+        <i class="fa-solid fa-microchip text-blue-600 text-2xl"></i> Microondas
+      </div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base">
+        <i class="fa-solid fa-mug-hot text-blue-600 text-2xl"></i> Hervidor
+      </div>
+    </div>
+
+    <div id="servicios" class="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-10 hidden">
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-restroom text-blue-600 text-2xl"></i> Baños y duchas</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-couch text-blue-600 text-2xl"></i> Área de descanso</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-car text-blue-600 text-2xl"></i> Estacionamiento</div>
+    </div>
+
+    <div id="areas" class="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-10 hidden">
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-house text-blue-600 text-2xl"></i> Quincho cerrado</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-umbrella-beach text-blue-600 text-2xl"></i> Quincho abierto</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-tree text-blue-600 text-2xl"></i> Terrazas</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-chair text-blue-600 text-2xl"></i> Reposeras</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-table text-blue-600 text-2xl"></i> Mezones</div>
+      <div class="bg-white p-4 sm:p-6 rounded-xl shadow-lg flex items-center gap-4 text-sm sm:text-base"><i class="fa-solid fa-bed text-blue-600 text-2xl"></i> Hamaca</div>
+    </div>
+  </section>
+
+
+  <!-- Información general -->
+  <section id="informacion" class="py-20 px-4 md:px-16 bg-white">
+    <h2 class="section-title">Información General</h2>
+    <div class="max-w-4xl mx-auto text-center text-gray-700 space-y-6">
+      <p><strong>Nik Eventos</strong> es un centro de eventos al aire libre, ideal para celebraciones familiares, cumpleaños, matrimonios y actividades de empresas o colegios.</p>
+
+      <div class="grid md:grid-cols-2 gap-8 text-left">
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-blue-600">Detalles del lugar</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li><strong>Capacidad:</strong> Hasta 60 personas aproximado.</li>
+            <li><strong>Precios:</strong> Dependiendo del día y temporada.</li>
+            <li><strong>Ambiente:</strong> Rodeado de naturaleza, ideal para actividades al aire libre.</li>
+          </ul>
+        </div>
+        <div class="space-y-4">
+          <h3 class="text-2xl font-bold text-blue-600">¿Por qué elegirnos?</h3>
+          <ul class="list-disc list-inside space-y-1">
+            <li>Infraestructura equipada y segura.</li>
+            <li>Piscina, quinchos, juegos y zonas sombreadas.</li>
+            <li>Ambiente familiar y tranquilo.</li>
+            <li>Estacionamiento amplio para mas de 40 vehiculos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-2xl font-bold text-blue-600 mb-4">Con quién hemos trabajado</h3>
+        <p>Colegios, empresas, matrimonios, bautizos y celebraciones privadas. Nuestra experiencia nos avala.</p>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-2xl font-bold text-blue-600 mb-4">Video presentación</h3>
+        <div class="aspect-w-16 aspect-h-9 w-full max-w-3xl mx-auto rounded-lg overflow-hidden">
+          <video controls class="w-full h-64 rounded-lg shadow-md">
+            <source src="video/VideoNikEventos.mp4" type="video/mp4" />
+            Tu navegador no soporta la reproducción de video.
+          </video>
+        </div>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-2xl font-bold text-blue-600 mb-4">¿Cómo llegar?</h3>
+        <p>Estamos ubicados en Santa Amelia, sector Tuniche – Rancagua, a solo 10 minutos del centro. Fácil acceso en auto o transporte privado.</p>
+      </div>
+
+      <div class="mt-10">
+        <h3 class="text-2xl font-bold text-blue-600 mb-4">¿Cómo reservar?</h3>
+        <p>
+          Puedes reservar contactándonos por
+          <a href="https://wa.me/56922518904" target="_blank" class="text-green-600 hover:underline">WhatsApp</a>,
+          <a href="https://m.me/nik.rancagua" target="_blank" class="text-blue-600 hover:underline">Messenger</a>
+          o completando el formulario de contacto. Te responderemos a la brevedad para confirmar disponibilidad.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería de imágenes -->
+  <section id="galeria" class="py-16 px-4 md:px-16 bg-gray-100">
+    <h2 class="section-title">Galería</h2>
+    <p class="text-center text-lg mb-6">Descubre nuestras instalaciones y momentos especiales capturados en fotos.</p>
+    <!-- Imágenes visibles inicialmente -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <img src="img/imagen15.jpeg" alt="Imagen 15 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen17.jpeg" alt="Imagen 17 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen18.jpeg" alt="Imagen 18 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen9.jpeg" alt="Imagen 9 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen21.jpeg" alt="Imagen 21 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen11.jpeg" alt="Imagen 11 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden" onclick="openLightbox(this.src)" />
+    </div>
+
+    <!-- Imágenes ocultas inicialmente -->
+    <div id="galeria-extra" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-6 hidden">
+      <img src="img/imagen1.jpeg" alt="Imagen 1 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen3.jpeg" alt="Imagen 3 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen7.jpeg" alt="Imagen 7 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen10.jpeg" alt="Imagen 10 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen19.jpeg" alt="Imagen 19 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen22.jpeg" alt="Imagen 22 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen23.jpeg" alt="Imagen 23 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen24.jpeg" alt="Imagen 24 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen25.jpeg" alt="Imagen 25 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+      <img src="img/imagen4.jpeg" alt="Imagen 4 Nik Eventos" class="gallery-item rounded-xl shadow cursor-pointer transition-transform duration-300 hover:scale-105 w-full h-auto object-cover overflow-hidden hidden" onclick="openLightbox(this.src)" />
+    </div>
+
+    <!-- Botón para mostrar más o menos -->
+    <div class="mt-6 flex justify-center">
+      <button id="toggle-gallery" data-state="collapsed" onclick="toggleGallery()" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded transition">Mostrar más</button>
+    </div>
+  </section>
+
+  <!-- Ubicación -->
+  <section id="ubicacion" class="py-16 px-4 md:px-16 bg-white">
+    <h2 class="section-title">¿Dónde estamos?</h2>
+    <p class="text-center text-lg mb-6">📍 Santa Amelia, sector Tuniche</p>
+    <div class="flex justify-center">
+      <iframe
+        src="https://www.google.com/maps?q=V6FM+XM,+Rancagua,+O'Higgins&output=embed"
+        width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="py-16 px-4 md:px-16 bg-white">
+    <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow text-sm sm:text-base">
+        <p class="italic mb-4">"Un lugar hermoso, ideal para cumpleaños y celebraciones. Todo muy limpio y ordenado."</p>
+        <p class="font-bold text-right">- Camila R.</p>
+      </div>
+      <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow text-sm sm:text-base">
+        <p class="italic mb-4">"Los niños lo pasaron increíble. Muy recomendado si buscas un ambiente familiar."</p>
+        <p class="font-bold text-right">- Andrés M.</p>
+      </div>
+      <div class="bg-gray-50 p-4 sm:p-6 rounded-xl shadow text-sm sm:text-base">
+        <p class="italic mb-4">"Tienen de todo: quinchos, piscina, juegos. Ya hemos ido dos veces y volveremos."</p>
+        <p class="font-bold text-right">- Sofía L.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section id="contacto" class="py-20 px-4 md:px-16 bg-blue-50">
+    <h2 class="section-title">Contáctanos</h2>
+    <p class="text-center text-lg text-gray-700 mb-10 max-w-2xl mx-auto">¿Tienes preguntas, sugerencias o quieres agendar una visita? Completa el formulario y te responderemos a la brevedad.</p>
+
+    <!-- Mensaje de éxito -->
+    <div id="form-success" class="hidden max-w-xl mx-auto bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-6 text-center">
+      ¡Gracias por tu mensaje! Te responderemos pronto.
+    </div>
+
+    <form action="https://formsubmit.co/nik31976@gmail.com" method="POST" class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow space-y-6" onsubmit="return showSuccessMessage();">
+      <div>
+        <label for="nombre" class="block text-left font-medium mb-1 text-gray-700">Nombre</label>
+        <input type="text" name="nombre" id="nombre" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+      <div>
+        <label for="correo" class="block text-left font-medium mb-1 text-gray-700">Correo electrónico</label>
+        <input type="email" name="correo" id="correo" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+      </div>
+      <div>
+        <label for="mensaje" class="block text-left font-medium mb-1 text-gray-700">Mensaje</label>
+        <textarea name="mensaje" id="mensaje" rows="5" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+      </div>
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded transition">Enviar mensaje</button>
+
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="#contacto">
+    </form>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row md:justify-around items-start text-center md:text-left gap-10">
+        <div class="w-full md:w-1/2">
+          <p class="text-lg font-semibold mb-4">Síguenos en redes sociales</p>
+          <div class="flex gap-4 justify-center md:justify-start">
+            <a href="https://www.facebook.com/nik.rancagua" target="_blank" class="hover:text-blue-400 footer-icon" aria-label="Facebook">
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="mailto:nik31976@gmail.com" target="_blank" class="hover:text-red-400 footer-icon" aria-label="Correo">
+              <i class="fas fa-envelope text-xl"></i>
+            </a>
+            <a href="tel:+56922518904" class="hover:text-blue-300 footer-icon" aria-label="Teléfono">
+              <i class="fas fa-phone-alt text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 mt-10 md:mt-0">
+          <p class="text-lg font-semibold mb-4">Información de contacto</p>
+          <ul class="text-sm leading-relaxed text-gray-300 space-y-1">
+            <li><strong>Teléfono:</strong> +56 9 2251 8904</li>
+            <li><strong>Email:</strong> eventonik@gmail.com</li>
+            <li><strong>Dirección:</strong> Santa Amelia, Sector Tuniche</li>
+          </ul>
+        </div>
+      </div>
+      <p class="mt-6 text-sm text-center">© 2025 Nik Eventos. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante Reserva ahora (WhatsApp) -->
+  <a href="https://wa.me/56922518904" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-xl flex items-center gap-2">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="hidden md:inline">Reserva ahora</span>
+  </a>
+
+  <!-- Lightbox simple -->
+  <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50" onclick="this.classList.add('hidden')">
+    <img id="lightbox-img" class="max-w-full max-h-full rounded" />
+  </div>
+
+
+</body>
+<script>
+  function showCategory(category) {
+    const sections = ['diversiones', 'equipamiento', 'servicios', 'areas'];
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.add('hidden');
+    });
+    const selected = document.getElementById(category);
+    if (selected) selected.classList.remove('hidden');
+
+    // Actualiza clases activas en botones usando dataset
+    const buttons = document.querySelectorAll('.toggle-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    const activeBtn = document.querySelector(`.toggle-btn[data-category="${category}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
+  }
+</script>
+<script src="main.js"></script>
+<script src="https://kit.fontawesome.com/e9de50e2aa.js" crossorigin="anonymous"></script>
+</body>
+</html>

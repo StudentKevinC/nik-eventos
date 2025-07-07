@@ -1,0 +1,283 @@
+/* Ajuste adicional para subtítulos azules */
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
+/* Animación de entrada fadeInUp */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out both;
+}
+/* Mejora visual hero fondo y filtros */
+#inicio {
+  position: relative;
+  /* Filtros para imagen de fondo */
+  filter: brightness(0.92) contrast(1.12) saturate(1.08);
+  /* Si Tailwind no lo aplica, refuerzo aquí */
+}
+
+/* Estilo para tarjetas animadas (instalaciones) */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Botón estilizado con microinteracción */
+/* Botón estilizado tipo "rounded-pill" y esquema cálido */
+/* Nueva apariencia vibrante y animada para .toggle-btn */
+
+/* Responsividad elegante para títulos */
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-family: 'Merriweather', serif;
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+p, h2, h3 {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+}
+
+/* Fondo general más suave (redefinido si es necesario) */
+body {
+  background-color: #fcf8f2;
+}
+/* styles.css mejorado */
+
+/* Paleta de colores base */
+:root {
+  --primary-color: #3b82f6;
+  --primary-dark: #1d4ed8;
+  --accent-color: #facc15;
+  --neutral-light: #f9fafb;
+  --neutral-dark: #1f2937;
+  --text-color: #1f2937;
+  --white: #ffffff;
+  --gray-border: #e5e7eb;
+  --bg-glass: rgba(255, 255, 255, 0.05);
+}
+
+/* Fuente general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff5e1; /* color piel claro */
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Secciones */
+section {
+  padding: 4rem 1rem;
+  transition: all 0.3s ease;
+  /* opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards; */
+}
+
+/* Títulos */
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Botón estilizado tipo "rounded-pill" y esquema cálido */
+/* Nueva apariencia vibrante y animada para .toggle-btn */
+.toggle-btn {
+  background-color: #f3f4f6;
+  color: #374151;
+  padding: 0.75rem 1.6rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.toggle-btn:hover {
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+  transform: scale(1.05);
+}
+
+.toggle-btn.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #1e3a8a;
+  transform: scale(1.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Botones generales */
+button {
+  background-color: #ffffff;
+  color: #1f2937;
+  border: 2px solid #3b82f6;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0d93ec;
+  transform: translateY(-2px);
+}
+
+button.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Hero overlay más suave */
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Tarjetas de instalaciones */
+.feature-box,
+.bg-gray-50 {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-box:hover,
+.bg-gray-50:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Íconos del footer */
+.footer-icon {
+  transition: transform 0.3s ease;
+}
+.footer-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo para los botones activos opcional */
+
+/* Estilo para el mapa */
+iframe {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-top: 1rem;
+}
+
+/* Navbar transparente con desenfoque */
+nav {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  section {
+    padding: 6rem 2rem;
+  }
+}
+
+/* Hero section background */
+.hero-section {
+  position: relative;
+  background-image: url('img/fondo1.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Overlay oscuro para contraste */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+/* Hero y sección de títulos personalizados */
+.hero-title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-family: 'Merriweather', serif;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.25);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1e40af;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 1.125rem;
+  color: #4b5563;
+  text-align: center;
+  max-width: 40rem;
+  margin: 0 auto 2.5rem;
+}
