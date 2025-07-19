@@ -60,16 +60,22 @@
   <!-- Espaciador para evitar superposición con el contenido -->
   <div class="h-20"></div>
 
-  <!-- Hero -->
-  <section id="inicio" class="hero-section">
-    <!-- Overlay con degradado oscuro -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30"></div>
+  <!-- Hero con video de fondo -->
+  <section id="inicio" class="relative h-screen overflow-hidden">
+    <!-- Video en loop como fondo -->
+    <video autoplay muted loop class="absolute inset-0 w-full h-full object-cover z-0">
+      <source src="video/piscina.mp4" type="video/mp4" />
+      Tu navegador no soporta video.
+    </video>
 
-    <!-- Contenido centrado -->
-    <div class="relative z-10 text-center px-4 max-w-screen-md mx-auto">
-      <h1 class="hero-title animate-fadeInUp">Nik Eventos</h1>
-      <p class="hero-subtitle animate-fadeInUp">El lugar perfecto para tus celebraciones al aire libre</p>
+    <!-- Contenido superpuesto -->
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+      <h1 class="hero-title text-white animate-fadeInUp">Nik Eventos</h1>
+      <p class="hero-subtitle text-white animate-fadeInUp">El lugar perfecto para tus celebraciones al aire libre</p>
     </div>
+    
+    <!-- Capa oscura opcional para contraste -->
+    <div class="absolute inset-0 bg-black/50 z-5"></div>
   </section>
 
   <!-- Instalaciones -->
@@ -142,54 +148,57 @@
     <div class="max-w-4xl mx-auto text-center text-gray-700 space-y-6">
       <p><strong>Nik Eventos</strong> es un centro de eventos al aire libre, ideal para celebraciones familiares, cumpleaños, matrimonios y actividades de empresas o colegios.</p>
 
-      <div class="grid md:grid-cols-2 gap-8 text-left">
-        <div class="space-y-4">
-          <h3 class="text-2xl font-bold text-blue-600">Detalles del lugar</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li><strong>Capacidad:</strong> Hasta 60 personas aproximado.</li>
-            <li><strong>Precios:</strong> Dependiendo del día y temporada.</li>
-            <li><strong>Ambiente:</strong> Rodeado de naturaleza, ideal para actividades al aire libre.</li>
-          </ul>
+      <div class="grid md:grid-cols-3 gap-6 text-left text-sm sm:text-base mt-10">
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Capacidad</h3>
+          <p>Hasta 60 personas aprox.</p>
         </div>
-        <div class="space-y-4">
-          <h3 class="text-2xl font-bold text-blue-600">¿Por qué elegirnos?</h3>
-          <ul class="list-disc list-inside space-y-1">
-            <li>Infraestructura equipada y segura.</li>
-            <li>Piscina, quinchos, juegos y zonas sombreadas.</li>
-            <li>Ambiente familiar y tranquilo.</li>
-            <li>Estacionamiento amplio para mas de 40 vehiculos.</li>
-          </ul>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Ambiente</h3>
+          <p>Rodeado de naturaleza, ideal para actividades al aire libre.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Precios</h3>
+          <p>Varían según día y temporada.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Equipamiento</h3>
+          <p>Infraestructura equipada y segura.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Zonas recreativas</h3>
+          <p>Piscina, quinchos, juegos y zonas sombreadas.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Estacionamiento</h3>
+          <p>Amplio para más de 40 vehículos.</p>
         </div>
       </div>
 
-      <div class="mt-10">
-        <h3 class="text-2xl font-bold text-blue-600 mb-4">Con quién hemos trabajado</h3>
-        <p>Colegios, empresas, matrimonios, bautizos y celebraciones privadas. Nuestra experiencia nos avala.</p>
-      </div>
-
-      <div class="mt-10">
-        <h3 class="text-2xl font-bold text-blue-600 mb-4">Video presentación</h3>
-        <div class="aspect-w-16 aspect-h-9 w-full max-w-3xl mx-auto rounded-lg overflow-hidden">
-          <video controls class="w-full h-64 rounded-lg shadow-md">
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <div class="text-blue-600 text-3xl mb-2"><i class="fa-solid fa-handshake"></i></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Clientes</h3>
+          <p>Colegios, empresas, matrimonios, bautizos y celebraciones privadas.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <div class="text-blue-600 text-3xl mb-2"><i class="fa-solid fa-video"></i></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Presentación</h3>
+          <video controls class="w-full h-40 mt-2 rounded-lg shadow-md">
             <source src="video/VideoNikEventos.mp4" type="video/mp4" />
             Tu navegador no soporta la reproducción de video.
           </video>
         </div>
-      </div>
-
-      <div class="mt-10">
-        <h3 class="text-2xl font-bold text-blue-600 mb-4">¿Cómo llegar?</h3>
-        <p>Estamos ubicados en Santa Amelia, sector Tuniche – Rancagua, a solo 10 minutos del centro. Fácil acceso en auto o transporte privado.</p>
-      </div>
-
-      <div class="mt-10">
-        <h3 class="text-2xl font-bold text-blue-600 mb-4">¿Cómo reservar?</h3>
-        <p>
-          Puedes reservar contactándonos por
-          <a href="https://wa.me/56922518904" target="_blank" class="text-green-600 hover:underline">WhatsApp</a>,
-          <a href="https://m.me/nik.rancagua" target="_blank" class="text-blue-600 hover:underline">Messenger</a>
-          o completando el formulario de contacto. Te responderemos a la brevedad para confirmar disponibilidad.
-        </p>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <div class="text-blue-600 text-3xl mb-2"><i class="fa-solid fa-map-location-dot"></i></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-2">¿Cómo llegar?</h3>
+          <p>Santa Amelia, sector Tuniche – Rancagua, a solo 10 minutos del centro.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg border-2 border-blue-300 p-6 text-center">
+          <div class="text-blue-600 text-3xl mb-2"><i class="fa-solid fa-calendar-check"></i></div>
+          <h3 class="text-xl font-bold text-blue-600 mb-2">Reservas</h3>
+          <p>Contáctanos por WhatsApp, Messenger o formulario para confirmar disponibilidad.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -239,6 +248,29 @@
     </div>
   </section>
 
+  <!-- Preguntas Frecuentes -->
+  <section class="py-20 px-4 md:px-16 bg-blue-50" id="preguntas">
+    <h2 class="section-title text-center">Preguntas Frecuentes</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 text-gray-700">
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-lg font-bold text-blue-600 mb-2">¿Cómo reservo?</h3>
+        <p>La fecha se reserva con abono del 50%.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-lg font-bold text-blue-600 mb-2">¿El lugar es exclusivo para mi grupo?</h3>
+        <p>Sí, el lugar es exclusivo para tu grupo independiente del número de personas que sean.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-lg font-bold text-blue-600 mb-2">¿Puedo llevar mascotas?</h3>
+        <p>Sí, el lugar es pet friendly. Puedes traer 1 o 2 mascotas de raza pequeña o mediana.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6">
+        <h3 class="text-lg font-bold text-blue-600 mb-2">¿Cuál es el horario?</h3>
+        <p>El horario es de 10:00 a 19:00 hrs.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Testimonios -->
   <section class="py-16 px-4 md:px-16 bg-white">
     <h2 class="section-title">Lo que dicen nuestros clientes</h2>
@@ -268,7 +300,7 @@
       ¡Gracias por tu mensaje! Te responderemos pronto.
     </div>
 
-    <form action="https://formsubmit.co/nik31976@gmail.com" method="POST" class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow space-y-6" onsubmit="return showSuccessMessage();">
+    <form onsubmit="return enviarWhatsApp();" class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow space-y-6">
       <div>
         <label for="nombre" class="block text-left font-medium mb-1 text-gray-700">Nombre</label>
         <input type="text" name="nombre" id="nombre" required class="w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
@@ -283,8 +315,6 @@
       </div>
       <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded transition">Enviar mensaje</button>
 
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="#contacto">
     </form>
   </section>
 
@@ -321,7 +351,7 @@
   </footer>
 
   <!-- Botón flotante Reserva ahora (WhatsApp) -->
-  <a href="https://wa.me/56922518904" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-xl flex items-center gap-2">
+  <a href="https://wa.me/56922518904?text=Hola!%20Me%20gustar%C3%ADa%20reservar%20una%20fecha%20en%20Nik%20Eventos.%20%C2%BFPuedes%20ayudarme%3F" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 text-xl flex items-center gap-2">
     <i class="fa-brands fa-whatsapp"></i>
     <span class="hidden md:inline">Reserva ahora</span>
   </a>
@@ -330,7 +360,6 @@
   <div id="lightbox" class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50" onclick="this.classList.add('hidden')">
     <img id="lightbox-img" class="max-w-full max-h-full rounded" />
   </div>
-
 
 </body>
 <script>
@@ -348,6 +377,28 @@
     buttons.forEach(btn => btn.classList.remove('active'));
     const activeBtn = document.querySelector(`.toggle-btn[data-category="${category}"]`);
     if (activeBtn) activeBtn.classList.add('active');
+  }
+</script>
+<script>
+  function enviarWhatsApp() {
+    const nombre = document.getElementById("nombre").value.trim();
+    const correo = document.getElementById("correo").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+    const telefono = "56922518904";
+
+    if (!nombre || !correo || !mensaje) {
+      alert("Por favor completa todos los campos.");
+      return false;
+    }
+
+    const texto = `Hola! 👋 Me gustaría reservar una fecha en Nik Eventos. ¿Puedes ayudarme?%0A%0A👤 Nombre: ${nombre}%0A📧 Correo: ${correo}%0A📝 Mensaje: ${mensaje}`;
+    const url = `https://wa.me/${telefono}?text=${texto}`;
+
+    window.open(url, "_blank");
+    document.getElementById("nombre").value = "";
+    document.getElementById("correo").value = "";
+    document.getElementById("mensaje").value = "";
+    return false;
   }
 </script>
 <script src="main.js"></script>
